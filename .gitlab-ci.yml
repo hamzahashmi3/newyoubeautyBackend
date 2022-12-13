@@ -1,0 +1,12 @@
+stages:
+  - deploy
+deploy_go_pdf_backend:
+  stage: deploy
+  tags:
+    - gamerse-drop
+  script:
+    - npm i -f
+    - npm run build:dev
+    - pm2 restart go-pdf-backend
+  only:
+    - main

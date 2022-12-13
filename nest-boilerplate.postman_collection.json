@@ -1,0 +1,761 @@
+{
+	"info": {
+		"_postman_id": "614d391c-b314-469e-a1c2-5a3de89f58b8",
+		"name": "nest-boilerplate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14947462"
+	},
+	"item": [
+		{
+			"name": "userManagement",
+			"item": [
+				{
+					"name": "viewUserProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "638b704ec85a24a884b1b5a3",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/user/viewUserProfile?userId=638b704ec85a24a884b1b5a3",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"viewUserProfile"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "638b704ec85a24a884b1b5a3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserInfo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3032/api/v1/user/getUserInfo?userId=638b704ec85a24a884b1b5a3",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getUserInfo"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "638b704ec85a24a884b1b5a3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"hamza hashmi\",\n  \"email\": \"hamza@renesistech.com\",\n  \"password\": \"123456\",\n  \"phoneNumber\": \"03029424089\",\n  \"profileImage\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"hamza@renesistech.com\",\n  \"password\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"hamza@renesistech.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/auth/forgotPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyOTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"hamza@renesistech.com\",\n  \"code\":1316\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/auth/verifyOTP",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"verifyOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"hamza@renesistech.com\",\n  \"password\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/auth/reset-password",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "googleAuthNest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://go-pdf-be.renesistechdemo.com/api/v1/auth/google",
+							"protocol": "https",
+							"host": [
+								"go-pdf-be",
+								"renesistechdemo",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"google"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "admin-Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin@gmail.com\",\n  \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/auth/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-totalUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3032/api/v1/user/admin-dashboard-data",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"admin-dashboard-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-all-Users-List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3032/api/v1/user/get-user-list?page=1&limit=5",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"get-user-list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-chart-data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3032/api/v1/user/admin-chart-data",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"admin-chart-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-get-PrivacyPolicy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3032/api/v1/privacyPolicy/getPrivacyPolicy",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"privacyPolicy",
+								"getPrivacyPolicy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-update-PrivacyPolicy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"docId\":\"637dcca27ffb730de4076bac\",\n    \"title\": \"Welcome to GoPDF1\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/privacyPolicy/updatePrivacyPolicy",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"privacyPolicy",
+								"updatePrivacyPolicy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-delete-PrivacyPolicy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3032/api/v1/privacyPolicy/getPrivacyPolicy",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"privacyPolicy",
+								"getPrivacyPolicy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Block-user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userId\": \"63808e9c61493cd8588c1774\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/user/blockUser",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"blockUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unblock-user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userId\": \"63808e9c61493cd8588c1774\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/user/blockUser",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"blockUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"userId\": \"63808e9c61493cd8588c1774\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/user/deleteUser",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-create-PrivacyPolicy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Welcome to GoPDF\",\n  \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis obcaecati dolore corporis doloremque accusantium omnis modi eos expedita deserunt earum aperiam, molestias quas! Veniam quasi culpa modi quae minima.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3032/api/v1/privacyPolicy/createPrivacyPolicy",
+							"host": [
+								"localhost"
+							],
+							"port": "3032",
+							"path": [
+								"api",
+								"v1",
+								"privacyPolicy",
+								"createPrivacyPolicy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "waqarForgotPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"hamza@renesistech.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3032/api/v1/auth/sendPasswordResetEmail",
+					"host": [
+						"localhost"
+					],
+					"port": "3032",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"sendPasswordResetEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddSecurityPDFEncryption",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "hamza@renesistech.com_ad2f1d409b5d1cd4c8ab44bc8278a985ca7953576d688936ed3fb90199e8687bb265909c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"SourceFileUrl\":\"https://drive.google.com/file/d1Et83jpn0t2SPmdgs_0raMbfrEka4nRX1viewusp=share_link\",\n    \"ownerPassword\": \"12345\",\n    \"userPassword\": \"54321\",\n    \"EncryptionAlgorithm\": \"AES_256bit\",\n    \"AllowPrintDocument\": false,\n    \"AllowFillForms\": false,\n    \"AllowModifyDocument\": false,\n    \"AllowContentExtraction\": false,\n    \"AllowModifyAnnotations\": false,\n    \"PrintQuality\": \"LowResolution\",\n    \"encrypt\": false,\n    \"name\": \"output-protected.pdf\",\n    \"async\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3032/api/v1/pdfeditor/encryptpdf",
+					"host": [
+						"localhost"
+					],
+					"port": "3032",
+					"path": [
+						"api",
+						"v1",
+						"pdfeditor",
+						"encryptpdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Online AddSecurityPDFEncryption",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "hamza@renesistech.com_ad2f1d409b5d1cd4c8ab44bc8278a985ca7953576d688936ed3fb90199e8687bb265909c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "Buffer.byteLength(jsonPayload, 'utf8')",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"https://bytescout-com.s3-us-west-2.amazonaws.com/files/demo-files/cloud-api/pdf-merge/sample1.pdf\",\n    \"ownerPassword\": \"123456\",\n    \"userPassword\": \"654321\",\n    \"encryptionAlgorithm\": \"AES_128bit\",\n    \"allowAccessibilitySupport\": true,\n    \"allowAssemblyDocument\": true,\n    \"allowPrintDocument\": true,\n    \"allowFillForms\": true,\n    \"allowModifyDocument\": true,\n    \"allowContentExtraction\": true,\n    \"allowModifyAnnotations\": true,\n    \"printQuality\": \"LowResolution\",\n    \"encrypt\": false,\n    \"name\": \"output-protected.pdf\",\n    \"async\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "api.pdf.co/v1/pdf/security/add",
+					"host": [
+						"api",
+						"pdf",
+						"co"
+					],
+					"path": [
+						"v1",
+						"pdf",
+						"security",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "compressPDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"file\":\"./pdf-sample1.pdf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3032/api/v1/pdfeditor/compresspdf",
+					"host": [
+						"localhost"
+					],
+					"port": "3032",
+					"path": [
+						"api",
+						"v1",
+						"pdfeditor",
+						"compresspdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PDFToDocx",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"filename\":\"./pdf-sample1.pdf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3032/api/v1/pdfeditor/pdftodocx",
+					"host": [
+						"localhost"
+					],
+					"port": "3032",
+					"path": [
+						"api",
+						"v1",
+						"pdfeditor",
+						"pdftodocx"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

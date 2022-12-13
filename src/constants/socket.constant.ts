@@ -1,0 +1,46 @@
+export const TEST_SOCKET = 'TestSocket';
+export const COMMENTED = 'COMMENTED';
+export const LIKED = 'LIKED';
+export const UNLIKED = 'UNLIKED';
+export const VIEWED = 'VIEWED';
+//messages
+export const CREATE_MESSAGE = 'CREATE_MESSAGE';
+export const CREATE_DRAFTED_MESSAGE = 'CREATE_DRAFTED_MESSAGE';
+export const CREATE_GROUPED_MESSAGE = 'CREATE_GROUPED_MESSAGE';
+export const CREATE_SAVED_MESSAGE = 'CREATE_SAVED_MESSAGE';
+
+//follow un follow
+export const FOLLOW_UN_FOLLOW = 'FOLLOW_UN_FOLLOW';
+
+// auth
+export const LOGOUT='LOGOUT'
+
+// delete group
+export const DELETE_GROUP_MESSAGE='DELETE_GROUP_MESSAGE'
+
+
+export const COLLECTIBLE_OPEN_FOR_AUCTION = 'COLLECTIBLE_OPEN_FOR_AUCTION';
+export const COLLECTIBLE_READY_FOR_CLAIM = 'COLLECTIBLE_READY_FOR_CLAIM';
+export const REFRESH_HOME_PAGE = 'REFRESH_HOME_PAGE';
+export const REFRESH_NFT_PAGE = 'REFRESH_NFT_PAGE';
+export const SEND_NEW_MESSAGE = 'SEND_NEW_MESSAGE';
+export const USER_ONLINE = 'USER_ONLINE';
+export const FAVOURITE_COLLECTIBLE = 'FAVOURITE_COLLECTIBLE';
+export const FOLLOWED_ME = 'FOLLOWED_ME';
+export const PLACED_BID = 'PLACED_BID';
+export const CLAIMED_NFT = 'CLAIMED_NFT';
+export const ADD_TO_WATCHLIST = 'ADD_TO_WATCHLIST';
+export const MINTED = 'MINTED';
+export const APPROVED = 'APPROVED';
+export const NFT_LISTED = 'NFT_LISTED';
+export const NFT_CLAIMED = 'NFT_CLAIMED';
+export const NFT_BOUGHT = 'NFT_BOUGHT';
+export const ROYALITY_SET = 'ROYALITY_SET';
+export const ACCOUNT_VERIFIED = 'ACCOUNT_VERIFIED';
+export const MY_PLACED_BID = 'MY_PLACED_BID';
+export const BOUGHT_BY_SOMEONE = 'BOUGHT_BY_SOMEONE';
+export const USER_NOTIFICATIONS = 'USER_NOTIFICATIONS';
+export const LIKE_NFT = 'LIKE_NFT';
+export const MINT_NFT = 'MINT_NFT';
+export const BID_NFT = 'BID_NFT';
+export const FEATURED_NFT = 'FEATURED_NFT';
